@@ -1,0 +1,35 @@
+Package: DBMS
+Title: Distribution-based smooth curves for chromatin reconstruction
+Version: 1.1
+Authors@R: 
+    c(person(given = "Elena",
+           family = "Tuzhilina",
+           role = c("aut", "cre"),
+           email = "elenatuz@stanford.edu"), 
+	person(given = "Trevor",
+           family = "Hastie",
+           role = c("aut"),
+           email = "hastie@stanford.edu"),
+	person(given = "Mark",
+           family = "Segal",
+           role = c("aut"),
+           email = "mark.segal@ucsf.edu"))
+Author: Elena Tuzhilina [aut, cre],
+		Trevor Hastie [aut],
+		Mark Segal [aut]
+Maintainer: Elena Tuzhilina <elenatuz@stanford.edu>
+Description: 
+	This package allows to compute 3D chromatin reconstruction using a contact matrix. The implemented approaches are based on principal curve technique modeling the chromatin directly by a smooth curve. The baseline method, principal curve metric scaling (PCMS), is inspired by classical multidimensional scaling; it has a simple solution that can be found via the singular value decomposition. Weighted principal curve metric scaling (WPCMS) is a weighted generalization of the PCMS technique that allows to control the influence of particular elements of the contact matrix on the resulting conformation reconstruction. Although being based on PCMS, the WPCMS approach requires an iterative algorithm to find the corresponding solution. Finally, the districution-based metric (DBMS) method is based on a probabilistic model for the elements of contact matrix; it repeatedly calculates the second order approximation of the model's negative log likelihood and optimizes the quadratic approximation by means of WPCMS algorithm. Four contact counts distributions are currently avaliable: Poisson, zero-inflated and Hurdle Poisson as well as negative binomial. All of the methods output the spatial coordinates of the resulting chromatin conformation reconstruction.
+Imports: 
+	splines,
+	vegan,
+	rARPACK, 
+	plotly	
+Suggests: 
+    knitr,
+    rmarkdown
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
+VignetteBuilder: knitr
