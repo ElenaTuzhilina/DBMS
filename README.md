@@ -9,5 +9,5 @@ Check *R documentation* for a detailed description of the functions available in
 
 The full code used for the *"Statistical curve models for inferring 3D chromatin architecture" paper by Tuzhilina, Hastie, and Segal* is available at
 
-**https://elenatuzhilina.github.io/DBMS-examples/**
+**https://elenatuzhilina.github.io/DBMS-experiments/**
 
